@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Titico",
   "license": "ISC",
+  "scripts": {
+    "start": "ts-node index.js",
+    "start:prod": "node build/index.js",
+    "tsc": "tsc"
+  },
   "dependencies": {
     "@discordjs/opus": "^0.7.0",
     "@discordjs/voice": "^0.7.5",

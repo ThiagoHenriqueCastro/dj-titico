@@ -89,7 +89,7 @@ client.on("messageCreate", async (message) => {
       "Mandaram o DJ Titico parar!",
       "Vishkk \nFui expulso"
     );
-    distube.skip(message);
+    distube.stop(message);
     return;
   }
 
