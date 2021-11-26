@@ -23,21 +23,3 @@ export function embedBuilder(
 
   return message.channel.send({ embeds: [embed] });
 }
-
-export function embedBuilderQueue(
-  client: Client,
-  message: TextChannel,
-  color: ColorResolvable,
-  title: string,
-  description: string,
-  thumbnail: string = null
-) {
-  const embed = new MessageEmbed()
-    .setColor(color)
-    .setFooter(client.user.username, client.user.displayAvatarURL());
-  if (title) embed.setTitle(title);
-  if (description) embed.setDescription(description);
-  if (thumbnail) embed.setThumbnail(thumbnail);
-
-  return message.send({ embeds: [embed] });
-}
