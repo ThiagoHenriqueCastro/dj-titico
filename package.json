@@ -7,7 +7,7 @@
   "license": "ISC",
   "type": "module",
   "engine": {
-    "node": "17.x"
+    "node": "16.0.0"
   },
   "scripts": {
     "start": "node index.js",
