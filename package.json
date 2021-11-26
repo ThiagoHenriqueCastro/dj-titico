@@ -6,7 +6,7 @@
   "author": "Titico",
   "license": "ISC",
   "type": "module",
-  "engine": {
+  "engines": {
     "node": "16.0.0"
   },
   "scripts": {
