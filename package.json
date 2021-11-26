@@ -8,7 +8,7 @@
   "type": "module",
   "engine": {
     "node": "17.x"
-  }
+  },
   "scripts": {
     "start": "node index.js",
     "start:prod": "node build/index.js",
