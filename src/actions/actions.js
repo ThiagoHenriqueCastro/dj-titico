@@ -7,12 +7,12 @@ import {
 } from "discord.js";
 
 export function embedBuilder(
-  client: Client,
-  message: Message,
-  color: ColorResolvable,
-  title: string = null,
-  description: string = null,
-  thumbnail: string = null
+  client,
+  message,
+  color,
+  title = null,
+  description = null,
+  thumbnail = null
 ) {
   const embed = new MessageEmbed()
     .setColor(color)

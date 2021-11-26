@@ -129,17 +129,10 @@ client.on("messageCreate", async (message) => {
     );
     return;
   }
-
-  if (cmd === "pb") {
-    const progress = guildQueue.createProgressBar();
-
-    console.log(progress.prettier);
-    return;
-  }
 });
 
 player
-  .on("songFirst", (queue: Queue, song: Song) => {
+  .on("songFirst", (queue, song) => {
     embedBuilder(
       client,
       textChannel,
@@ -149,7 +142,7 @@ player
       song.thumbnail
     );
   })
-  .on("songAdd", (queue: Queue, song: Song) => {
+  .on("songAdd", (queue, song) => {
     embedBuilder(
       client,
       textChannel,
@@ -159,7 +152,7 @@ player
       song.thumbnail
     );
   })
-  .on("songChanged", (queue: Queue, song: Song) => {
+  .on("songChanged", (queue, song) => {
     embedBuilder(
       client,
       textChannel,
@@ -169,7 +162,7 @@ player
       song.thumbnail
     );
   })
-  .on("error", (error, queue: Queue) => {
+  .on("error", (error, queue) => {
     embedBuilder(
       client,
       textChannel,
