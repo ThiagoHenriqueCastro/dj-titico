@@ -5,8 +5,9 @@
   "main": "index.js",
   "author": "Titico",
   "license": "ISC",
+  "type": "module",
   "scripts": {
-    "start": "ts-node index.js",
+    "start": "node index.js",
     "start:prod": "node build/index.js",
     "tsc": "tsc"
   },

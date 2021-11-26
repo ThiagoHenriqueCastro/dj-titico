@@ -1,8 +1,6 @@
-import { Client, Intents } from "discord.js";
-import { prefix } from "./params.json";
-import { Player, Queue, Song } from "discord-music-player";
+import { Client, Intents, MessageEmbed } from "discord.js";
+import { Player } from "discord-music-player";
 import * as dotenv from "dotenv";
-import { embedBuilder } from "./src/actions";
 dotenv.config();
 
 const client = new Client({
@@ -18,6 +16,8 @@ let textChannel;
 const player = new Player(client, {
   leaveOnEmpty: false,
 });
+
+const prefix = ">";
 
 // LISTENERS
 
@@ -171,5 +171,23 @@ player
       "Algum problema ocorreu! Favor contatar Titico para solução"
     );
   });
+
+export function embedBuilder(
+  client,
+  message,
+  color,
+  title = null,
+  description = null,
+  thumbnail = null
+) {
+  const embed = new MessageEmbed()
+    .setColor(color)
+    .setFooter(client.user.username, client.user.displayAvatarURL());
+  if (title) embed.setTitle(title);
+  if (description) embed.setDescription(description);
+  if (thumbnail) embed.setThumbnail(thumbnail);
+
+  return message.channel.send({ embeds: [embed] });
+}
 
 client.login(process.env.TOKEN);
