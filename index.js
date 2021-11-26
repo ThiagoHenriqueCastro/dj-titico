@@ -11,6 +11,8 @@ const client = new Client({
   ],
 });
 
+client.login(process.env.TOKEN);
+
 let textChannel;
 
 const player = new Player(client, {
@@ -189,5 +191,3 @@ export function embedBuilder(
 
   return message.channel.send({ embeds: [embed] });
 }
-
-client.login(process.env.TOKEN);
