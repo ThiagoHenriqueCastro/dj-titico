@@ -1,8 +1,8 @@
 import { Client, Intents } from "discord.js";
-import { prefix } from "../params.json";
+import { prefix } from "./params.json";
 import { Player, Queue, Song } from "discord-music-player";
 import * as dotenv from "dotenv";
-import { embedBuilder } from "./actions";
+import { embedBuilder } from "./src/actions";
 dotenv.config();
 
 const client = new Client({
