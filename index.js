@@ -1,7 +1,7 @@
 import { Client, Intents, MessageEmbed } from "discord.js";
 import { Player } from "discord-music-player";
-import * as dotenv from "dotenv";
-dotenv.config();
+//import * as dotenv from "dotenv";
+//dotenv.config();
 
 const client = new Client({
   intents: [
